@@ -1,0 +1,305 @@
+/*Global elements styling*/
+
+* {
+    text-align: center;
+    font-family: "Orbitron", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: solid 1px white;*/
+    color: white;
+}
+
+:root {
+    --dark-mode-blue: #1B1B32;
+    --border-color: 1px solid whitesmoke;
+    --ecto-green: #53E836;
+    --shadow-gray: #36454F;
+}
+
+#logo {
+    margin: 1vw;
+    padding: .5px;
+    width: 50px;
+    height: 50px;
+    background-color: none;
+    justify-content: left;
+    border-right: 1px solid var(--ecto-green);
+    border-collapse: collapse;
+}
+
+#navbar {
+    position: fixed;
+    background-color: var(--dark-mode-blue);
+    border-bottom: var(--border-color);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content:space-between; 
+    align-items: center;    
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    min-height: 50px;
+    z-index: 1;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+li {
+    font-size: larger;
+    list-style-type: none;
+    margin: 1vw;
+    text-decoration: none;
+    font-style: oblique;
+    padding: 1vw;
+}
+li a:hover {
+    color: var(--ecto-green);
+    text-shadow: 2px 2px var(--shadow-gray);
+    box-shadow: inset 1px 1px white;
+    padding-top: .5vw;
+    padding-left: .5vw;
+    transition: 30ms ease-in-out;
+}
+@media screen and (min-width: 50%) {
+    li a:hover {
+        color: var(--ecto-green);
+        text-shadow: 2px 2px var(--shadow-gray);
+        box-shadow: inset 1px 1px white;
+        padding-top: 1.2vw;
+        padding-left: 1.2vw;
+        transition: 30ms ease-in-out;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--shadow-gray);
+}
+
+section {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+hr {
+    border: solid 2px white;
+    margin-top: 1vh;
+}
+
+.initial-span {
+    font-family: "Sankofa Display", Arial, sans-serif;
+    font-weight: bold;
+}
+.initial-span-b {
+    font-family: "Sankofa Display", Arial, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    color: var(--ecto-green);
+}
+#projects h1 {
+    border-left: solid 2px var(--ecto-green);
+    border-bottom: solid 2px var(--ecto-green);
+    padding-bottom: .1em;
+    padding-left: .2em;
+    font-size: xx-large;
+    margin-bottom: 2vh;
+}
+h1::first-letter {
+    font-family: "Sankofa Display", Arial, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    color: var(--ecto-green);
+    text-shadow: 2px 2px var(--dark-mode-blue);
+}
+#welcome-section h1 {
+    border-left: solid 2px var(--ecto-green);
+    border-bottom: solid 2px var(--ecto-green);
+    padding-bottom: .1em;
+    padding-left: .2em;
+}
+#welcome-section p{
+    padding-top: .1em;
+    font-style: italic;
+}
+
+h2::first-letter {
+    font-family: "Sankofa Display", Arial, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    color: var(--ecto-green);
+    text-shadow: 2px 2px var(--dark-mode-blue);
+}
+
+/*Making this secitons flex then setting the content and items both 
+to center places the content inside the section to a 0 on both axis*/
+#welcome-section {
+    background-color: var(--shadow-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:50vh;
+    border-bottom: var(--border-color);
+}
+#welcome-section p {
+    color:rgb(197, 189, 175);
+    font-style: obl;
+}
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;    
+}
+@media screen and (max-width: 800px) {
+    #projects {
+        flex-direction: column;    
+    }
+}
+
+/*#contact-info {
+    background-color: blueviolet;
+}*/
+
+/*Project Tiles Stylings - Start*/
+.project-tile  {
+    background-color: var(--dark-mode-blue);
+    border-bottom: solid white 3px;
+    border-left: solid white 3px;
+    border-right: solid 3px var(--ecto-green);
+    width: 500px;
+    height: 250px;
+    margin: 0.8vw;
+    box-shadow: 5px 5px var(--ecto-green);
+}
+@media screen and (max-width: 800px) {
+    .project-tile {
+        width: 90%;
+        height: 300px;
+        margin: 1vw;
+    }
+}
+.project-tile h2 {
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 800px) {
+    .project-tile h2 {
+        vertical-align: middle;
+        text-align: center;
+        margin-top: 05px;
+        margin-bottom: 10px;
+    }
+}
+.project-preview {
+    width: 100%;
+    height: 80%;
+    border-bottom: solid 3px var(--ecto-green);
+    border-top: solid 3px var(--ecto-green);
+    opacity: 0.7;
+}
+.project-preview:hover {
+    opacity: 1;
+}
+.tile-img {
+    display: none;
+    vertical-align: middle;
+    height: 25px;
+    width: 25px;
+    margin: .2em;
+}
+.tile-img-OB {
+    display: none;
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
+    margin: .2em;
+}
+.tile-img-M {
+    display: none;
+    vertical-align: middle;
+    height: 30px;
+    width: 40px;
+    margin: .2em;
+}
+.project-tile:hover {
+    border-bottom: solid var(--ecto-green) 3px;
+    border-left: solid var(--ecto-green) 3px;
+    border-right: solid 3px var(--ecto-green);
+    box-shadow: 5px 5px white;
+    h2 {
+        font-family: "Sankofa Display", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 180%;
+        color: white;
+    }
+    .tile-img {
+        display: inline;
+    }
+    .tile-img-OB {
+        display: inline;
+    }
+    .tile-img-M {
+        display: inline;
+    }
+}
+
+/*Contact Info Styling*/
+#contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1em;
+}
+.contact-box {
+    padding: .25em .25em .25em .25em;
+    background-color: var(--dark-mode-blue);
+    border-top: solid 3px var(--ecto-green);;
+    border-bottom: solid white 3px;
+    border-left: solid white 3px;
+    border-right: solid 3px var(--ecto-green);
+    margin: 1vw;
+    box-shadow: 5px 5px var(--shadow-gray);
+    width: 12em;
+    height: 3em;
+    vertical-align: middle;
+}
+.contact-box:hover {
+    border-top: solid 3px white;
+    border-bottom: solid 3px var(--ecto-green) ;
+    border-left: solid 3px var(--ecto-green) ;
+    border-right: solid 3px white;
+    box-shadow: 5px 5px white;
+}
+.contact-box-p {
+    text-align: inherit;
+    vertical-align: center;
+}
+
+/*iframe {
+    height: 50%;
+    width: 100%;
+}
+@media screen and (min-width: 50%) {
+    iframe {
+        height: 50%;
+        width: 100%;
+    }
+}*/
+
+div {
+    background-color: rgb(119, 119, 152);
+    /*border: solid white 3px; Keep until done with all others*/
+    margin: 5px;
+    /*font-size: x-large;*/
+    padding: auto;
+}
